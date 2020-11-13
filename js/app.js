@@ -16,18 +16,16 @@ init();
 
 function init() {
     sum = 1;
-    let display = 1;
     render();
 };
 
 function render() {
-    display.value = '';
-    display.innerHTML = sum
-    if(sum < 0) display.style.color = 'red';
+    display.innerHTML = sum;
+    sum < 0 ? display.style.color = 'red' : display.style.color = 'black' ;
 };
 
 function handleClick(evt) {
-    let button = evt.target
+    let button = evt.target;
     let value = parseInt(num.value);
     if(!num.value.length) return;
     button.id === 'plus' ? sum += value : sum -= value;
